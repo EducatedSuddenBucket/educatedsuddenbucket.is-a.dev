@@ -75,9 +75,7 @@
         <div class="main-content">
             <h2>Contact</h2>
             <p>You can reach me at 
-                <a href="mailto:root@educatedsuddenbucket.is-a.dev" class="email-link">
-                    root@educatedsuddenbucket.is-a.dev
-                </a>
+                <span id="email-address" class="email-link" onclick="copyEmailToClipboard()">root@educatedsuddenbucket.is-a.dev</span>
             </p>
             <p>Or on Discord:<br>
                 <span id="discord-username" class="discord-link" onclick="copyToClipboard(this)">EducatedSuddenBucket</span>
@@ -99,6 +97,17 @@
             document.execCommand('copy');
             document.body.removeChild(textarea);
             alert('Copied to clipboard: ' + text);
+        }
+
+        function copyEmailToClipboard() {
+            var email = document.getElementById('email-address').innerText;
+            var textarea = document.createElement('textarea');
+            textarea.value = email;
+            document.body.appendChild(textarea);
+            textarea.select();
+            document.execCommand('copy');
+            document.body.removeChild(textarea);
+            alert('Copied email address to clipboard: ' + email);
         }
     </script>
 </body>
