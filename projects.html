@@ -49,6 +49,20 @@
         }
         .repo-item {
             margin-bottom: 15px;
+            list-style-type: none;
+        }
+        .repo-link {
+            text-decoration: none;
+            color: white;
+            display: block;
+            padding: 10px;
+            border: 1px solid transparent;
+            border-radius: 8px; /* Add rounded corners */
+            transition: background-color 0.3s, border-color 0.3s;
+        }
+        .repo-link:hover {
+            background-color: #374151;
+            border-color: #374151;
         }
         .repo-name {
             font-size: 18px;
@@ -90,17 +104,19 @@
 
                     const repoLink = document.createElement('a');
                     repoLink.href = repo.html_url;
-                    repoLink.textContent = repo.name;
-                    repoLink.className = 'repo-name';
-                    repoLink.style.color = 'white';
-                    repoLink.style.textDecoration = 'none';
+                    repoLink.className = 'repo-link';
 
-                    const repoDescription = document.createElement('p');
+                    const repoName = document.createElement('div');
+                    repoName.textContent = repo.name;
+                    repoName.className = 'repo-name';
+
+                    const repoDescription = document.createElement('div');
                     repoDescription.textContent = repo.description || 'No description available.';
                     repoDescription.className = 'repo-description';
 
+                    repoLink.appendChild(repoName);
+                    repoLink.appendChild(repoDescription);
                     listItem.appendChild(repoLink);
-                    listItem.appendChild(repoDescription);
                     repoList.appendChild(listItem);
                 }
             });
