@@ -37,7 +37,8 @@
             font-size: 18px;
             display: block;
             padding: 10px;
-            transition: background-color 0.3s;
+            border-radius: 8px;
+            transition: background-color 0.3s, border-color 0.3s;
         }
         .sidebar a:hover, .sidebar a.active {
             background-color: #1f2937;
@@ -46,6 +47,19 @@
             flex-grow: 1;
             padding: 20px;
             overflow-y: auto;
+        }
+        .email-link {
+            text-decoration: none;
+            color: white;
+            display: inline-block;
+            padding: 10px;
+            border: 1px solid transparent;
+            border-radius: 8px;
+            transition: background-color 0.3s, border-color 0.3s;
+        }
+        .email-link:hover {
+            background-color: #374151;
+            border-color: #374151;
         }
     </style>
 </head>
@@ -58,7 +72,11 @@
         </div>
         <div class="main-content">
             <h2>Contact</h2>
-            <p>You can reach me at my domain: educatedsuddenbucket.is-a.dev</p>
+            <p>You can reach me at 
+                <a href="mailto:root@educatedsuddenbucket.is-a.dev" class="email-link">
+                    root@educatedsuddenbucket.is-a.dev
+                </a>
+            </p>
         </div>
     </div>
 </body>
