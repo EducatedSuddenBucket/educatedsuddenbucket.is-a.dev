@@ -47,6 +47,17 @@
             padding: 20px;
             overflow-y: auto;
         }
+        .repo-item {
+            margin-bottom: 15px;
+        }
+        .repo-name {
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .repo-description {
+            font-size: 14px;
+            color: #d1d5db;
+        }
     </style>
 </head>
 <body>
@@ -75,12 +86,21 @@
             repos.forEach(repo => {
                 if (repo.name !== excludeRepo) {
                     const listItem = document.createElement('li');
+                    listItem.className = 'repo-item';
+
                     const repoLink = document.createElement('a');
                     repoLink.href = repo.html_url;
                     repoLink.textContent = repo.name;
+                    repoLink.className = 'repo-name';
                     repoLink.style.color = 'white';
                     repoLink.style.textDecoration = 'none';
+
+                    const repoDescription = document.createElement('p');
+                    repoDescription.textContent = repo.description || 'No description available.';
+                    repoDescription.className = 'repo-description';
+
                     listItem.appendChild(repoLink);
+                    listItem.appendChild(repoDescription);
                     repoList.appendChild(listItem);
                 }
             });
