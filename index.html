@@ -38,7 +38,7 @@
             font-size: 18px;
             display: block;
             padding: 10px;
-            border-radius: 8px; /* Add rounded corners */
+            border-radius: 8px;
             transition: background-color 0.3s, border-color 0.3s;
         }
         .sidebar a:hover, .sidebar a.active {
@@ -56,14 +56,42 @@
             line-height: 1.2;
             white-space: pre;
         }
-        .ascii-blue {
-            color: #1e90ff;
+        .ascii-white {
+            color: #ffffff;
+        }
+        .ascii-red {
+            color: #ff0000;
         }
         .ascii-purple {
             color: #800080;
         }
-        .ascii-white {
-            color: #ffffff;
+        .info-container {
+            margin-top: 20px;
+            margin-left: 0;
+        }
+        .birthday-section {
+            background-color: #0a192f;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .birthday-section h2 {
+            margin: 0 0 10px;
+            font-size: 24px;
+            color: #64ffda;
+            text-shadow: 0 0 5px rgba(100, 255, 218, 0.5);
+        }
+        .birthday-section p {
+            margin: 0;
+            font-size: 18px;
+            color: #ccd6f6;
+        }
+        .lanyard-status {
+            border: none;
+            width: 100%;
+            height: 500px; /* Set a fixed height */
         }
     </style>
 </head>
@@ -75,30 +103,30 @@
             <a href="contact">Contact</a>
         </div>
         <div class="main-content">
-            <pre><span class="ascii-blue">       .hddddddddddddddddddddddh.</span>           root@educatedsuddenbucket.is-a.dev
-<span class="ascii-blue">      :dddddddddddddddddddddddddd:</span>          ----------------------------------
-<span class="ascii-blue">     /dddddddddddddddddddddddddddd/</span>         OS: Alpine Linux 3.20.0 i686
-<span class="ascii-blue">    +dddddddddddddddddddddddddddddd+</span>        Kernel: Linux 6.6.32-0-lts
-<span class="ascii-blue">  `sdddddddddddddddddddddddddddddddds`</span>      Uptime: 1 hour, 18 mins
-<span class="ascii-blue"> `ydddddddddddd++hdddddddddddddddddddy`</span>     Packages: 1066 (apk)
-<span class="ascii-blue">.hddddddddddd+`  `+ddddh:-sdddddddddddh.</span>    Shell: sh
-<span class="ascii-blue">hdddddddddd+`      `+y:    .sddddddddddh</span>    Display (VGA1): 1024x768 @ 60Hz
-<span class="ascii-blue">ddddddddh+`   `//`   `.`     -sddddddddd</span>    DE: Xfce4 4.18
-<span class="ascii-blue">ddddddh+`   `/hddh/`   `:s-    -sddddddd</span>    WM: Xfwm4 (X11)
-<span class="ascii-blue">ddddh+`   `/+/dddddh/`   `+s-    -sddddd</span>    WM Theme: Default
-<span class="ascii-blue">ddd+`   `/o` :dddddddh/`   `oy-    .yddd</span>    Theme: Greybird [GTK2/3/4]
-<span class="ascii-blue">hdddyo+ohddyosdddddddddho+oydddy++ohdddh</span>    Icons: Adwaita [GTK2/3/4]
-<span class="ascii-blue">.hddddddddddddddddddddddddddddddddddddh.</span>    Font: 0xProto Nerd Font Mono (10pt, Bold, Italic) [GTK2/3/4]
-<span class="ascii-blue"> `yddddddddddddddddddddddddddddddddddy`</span>     Terminal: GNOME Console 46.0
-<span class="ascii-blue">  `sdddddddddddddddddddddddddddddddds`</span>      Terminal Font: 0xProto Nerd Font Mono (10pt)
-<span class="ascii-blue">    +dddddddddddddddddddddddddddddd+</span>        CPU: Intel(R) Core(TM)2 Duo     E6550 (2) @ 1.77 GHz
-<span class="ascii-blue">     /dddddddddddddddddddddddddddd/</span>         GPU: Intel 82G33/G31 Express Integrated Graphics Controller [Integrated]
-<span class="ascii-blue">      :dddddddddddddddddddddddddd:</span>          Memory: 558.44 MiB / 984.56 MiB (57%)
-<span class="ascii-blue">       .hddddddddddddddddddddddh.</span>           Swap: 218.89 MiB / 2.00 GiB (11%)
-                                            Disk (/): 8.03 GiB / 19.79 GiB (41%) - ext4
-                                            Disk (/mnt/ubuntu): 32.65 GiB / 52.85 GiB (62%) - ext4
-                                            Local IP (wlan0): 192.168.1.13/24 *
-                                            Locale: C.UTF-8</pre>
+            <pre><span class="ascii-white">       _,met$$$$$gg.</span>           <span class="ascii-red">root@educatedsuddenbucket.is-a.dev</span>
+<span class="ascii-white">    ,g$$$$$$$$$$$$$$$P.</span>         <span class ="ascii-red">--------------------------------------------------</span>
+<span class="ascii-white">  ,g$$P"     """Y$$.".</span>        <span class="ascii-red">OS</span>: Debian GNU/Linux 12 (bookworm) i686
+<span class="ascii-white"> ,$$P'              `$$$.</span>     <span class="ascii-red">Kernel</span>: 5.10.197-antix.1-486-smp
+<span class="ascii-white">',$$P       ,ggs.     `$$b:</span>   <span class="ascii-red">Uptime</span>: 13 mins
+<span class="ascii-white">`d$$'     ,$P"'   .    $$$</span>    <span class="ascii-red">Packages</span>: 1783 (dpkg)
+<span class="ascii-white"> $$P      d$'     ,    $$P</span>    <span class="ascii-red">Shell</span>: bash 5.2.15
+<span class="ascii-white"> $$:      $$.   -    ,d$$'</span>    <span class="ascii-red">Resolution</span>: 1024x768
+<span class="ascii-white"> $$;      Y$b._   _,d$P'</span>      <span class="ascii-red">DE</span>: icewm
+<span class="ascii-white"> Y$$.    `.`"Y$$$$P"'</span>         <span class="ascii-red">WM</span>: IceWM 3.4.5 (Linux/i686)
+<span class="ascii-white"> `$$b      "-.__</span>              <span class="ascii-red">WM Theme</span>: FX-dark
+<span class="ascii-white">  `Y$$</span>                        <span class="ascii-red">Theme</span>: Adwaita-dark [GTK2/3]
+<span class="ascii-white">   `Y$$.</span>                      <span class="ascii-red">Icons</span>: papirus-antix [GTK2/3]
+<span class="ascii-white">     `$$b.</span>                    <span class="ascii-red">Terminal</span>: roxterm
+<span class="ascii-white">       `Y$$b.</span>                 <span class="ascii-red">CPU</span>: Intel Core 2 Duo E6550 (2) @ 1.861GHz
+<span class="ascii-white">          `"Y$b._</span>             <span class="ascii-red">GPU</span>: Intel 82G33/G31 Express
+<span class="ascii-white">              `"""</span>            <span class="ascii-red">Memory</span>: 601MiB / 988MiB</pre>
+            <div class="info-container">
+                <div class="birthday-section">
+                    <h2>Birthday</h2>
+                    <p>25th June</p>
+                </div>
+                <object data="https://lanyard.cnrad.dev/api/1167825360151380032" class="lanyard-status"></object>
+            </div>
         </div>
     </div>
 </body>
