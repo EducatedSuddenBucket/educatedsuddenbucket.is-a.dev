@@ -9,7 +9,7 @@
             font-family: 'Courier New', Courier, monospace;
             margin: 0;
             padding: 0;
-            background-image: url('background.png');
+            background-image: url('background.png'); /* Added background image */
             background-size: cover;
             background-repeat: no-repeat;
             background-attachment: fixed;
@@ -25,17 +25,12 @@
         }
         .sidebar {
             width: 250px;
-            background-color: rgba(17, 24, 39, 0.9); /* Semi-transparent background */
             color: white;
             display: flex;
             flex-direction: column;
             padding: 20px;
-            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
             flex-shrink: 0;
-            position: fixed;
-            height: 100%;
-            top: 0;
-            left: 0;
         }
         .sidebar a {
             color: white;
@@ -54,8 +49,7 @@
             flex-grow: 1;
             padding: 20px;
             overflow-y: auto;
-            margin-left: 250px; /* Offset for fixed sidebar */
-            background-color: rgba(31, 41, 55, 0.9); /* Semi-transparent background */
+            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
         }
         .repo-item {
             margin-bottom: 15px;
@@ -67,7 +61,7 @@
             display: block;
             padding: 10px;
             border: 1px solid transparent;
-            border-radius: 8px; /* Add rounded corners */
+            border-radius: 8px; /* Rounded corners */
             transition: background-color 0.3s, border-color 0.3s;
         }
         .repo-link:hover {
