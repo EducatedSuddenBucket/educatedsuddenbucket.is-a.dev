@@ -9,47 +9,39 @@
             font-family: 'Courier New', Courier, monospace;
             margin: 0;
             padding: 0;
-            background-image: url('background.png'); /* Added background image */
+            background-image: url('background.png');
             background-size: cover;
             background-repeat: no-repeat;
             background-attachment: fixed;
             color: white;
             display: flex;
-            height: 100vh;
-            overflow: hidden;
-        }
-        .container {
-            display: flex;
-            width: 100%;
-            height: 100%;
-        }
-        .sidebar {
-            width: 250px;
-            color: white;
-            display: flex;
             flex-direction: column;
-            padding: 20px;
-            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
-            flex-shrink: 0;
+            min-height: 100vh;
+            overflow-x: hidden;
         }
-        .sidebar a {
+        .top-nav {
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+        .top-nav a {
             color: white;
             text-decoration: none;
-            margin: 10px 0;
+            margin: 0 15px;
             font-size: 18px;
-            display: block;
             padding: 10px;
             border-radius: 8px;
             transition: background-color 0.3s, border-color 0.3s;
         }
-        .sidebar a:hover, .sidebar a.active {
+        .top-nav a:hover, .top-nav a.active {
             background-color: #1f2937;
         }
         .main-content {
             flex-grow: 1;
             padding: 20px;
             overflow-y: auto;
-            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+            background-color: rgba(0, 0, 0, 0.5);
         }
         .repo-item {
             margin-bottom: 15px;
@@ -61,7 +53,7 @@
             display: block;
             padding: 10px;
             border: 1px solid transparent;
-            border-radius: 8px; /* Rounded corners */
+            border-radius: 8px;
             transition: background-color 0.3s, border-color 0.3s;
         }
         .repo-link:hover {
@@ -79,18 +71,16 @@
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="sidebar">
-            <a href="index">Home</a>
-            <a href="projects" class="active">Projects</a>
-            <a href="contact">Contact</a>
-        </div>
-        <div class="main-content">
-            <h2>Projects</h2>
-            <ul id="github-repos">
-                <!-- GitHub repositories will be populated here -->
-            </ul>
-        </div>
+    <div class="top-nav">
+        <a href="index">Home</a>
+        <a href="projects" class="active">Projects</a>
+        <a href="contact">Contact</a>
+    </div>
+    <div class="main-content">
+        <h2>Projects</h2>
+        <ul id="github-repos">
+            <!-- GitHub repositories will be populated here -->
+        </ul>
     </div>
     <script>
         const username = 'EducatedSuddenBucket'; // GitHub username
